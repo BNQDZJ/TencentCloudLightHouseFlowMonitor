@@ -19,8 +19,9 @@ SecretKey = os.environ["SecretKey"]
 
 regions = ["ap-beijing", "ap-chengdu", "ap-guangzhou", "ap-hongkong", "ap-nanjing", "ap-shanghai", "ap-singapore", "ap-tokyo", "eu-moscow", "na-siliconvalley"]
 percent = 0.97  # 流量限额，1表示使用到100%关机，默认设置为95%
-tgToken = os.environ["tgToken"]
+# tgToken = os.environ["tgToken"]
 webhook = os.environ["webhook"]
+atMobiles = os.environ["atMobiles"]
 
 #钉钉机器人告警   
 def sendmessage(message):
@@ -33,9 +34,9 @@ def sendmessage(message):
         "text": {"content": message},
         "at": {
             "atMobiles": [
-                "157********"                                    #如果需要@某人，这里写他的手机号
+                atMobiles                                    #如果需要@某人，这里写他的手机号
             ],
-            "isAtAll": 1                                         #如果需要@所有人，这里写1
+            "isAtAll": 0                                         #如果需要@所有人，这里写1
         }
     }
     String_textMsg = json.dumps(String_textMsg)
