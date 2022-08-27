@@ -21,7 +21,7 @@ regions = ["ap-beijing", "ap-chengdu", "ap-guangzhou", "ap-hongkong", "ap-nanjin
 percent = 0.97  # 流量限额，1表示使用到100%关机，默认设置为95%
 # tgToken = os.environ["tgToken"]
 webhook = os.environ["webhook"]
-atMobiles = os.environ["atMobiles"]
+mobilephone = os.environ["mobilephone"]
 
 #钉钉机器人告警   
 def sendmessage(message):
@@ -34,7 +34,7 @@ def sendmessage(message):
         "text": {"content": message},
         "at": {
             "atMobiles": [
-                atMobiles                                    #如果需要@某人，这里写他的手机号
+                mobilephone                                    #如果需要@某人，这里写他的手机号
             ],
             "isAtAll": 0                                         #如果需要@所有人，这里写1
         }
