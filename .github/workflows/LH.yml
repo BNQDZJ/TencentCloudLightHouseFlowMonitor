@@ -33,5 +33,6 @@ jobs:
         SecretKey: ${{secrets.SecretKey}}
         tgToken: ${{secrets.tgToken}}
         webhook: ${{secrets.webhook}}
+        mobilephone: ${{secrets.mobilephone}}
       run: |
         python LH.py
