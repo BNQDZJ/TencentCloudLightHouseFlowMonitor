@@ -19,7 +19,7 @@ SecretKey = os.environ["SecretKey"]
 
 regions = ["ap-beijing", "ap-chengdu", "ap-guangzhou", "ap-hongkong", "ap-nanjing", "ap-shanghai", "ap-singapore", "ap-tokyo", "eu-moscow", "na-siliconvalley"]
 percent = 0.97  # 流量限额，1表示使用到100%关机，默认设置为95%
-# tgToken = os.environ["tgToken"]
+tgToken = os.environ["tgToken"]
 webhook = os.environ["webhook"]
 mobilephone = os.environ["mobilephone"]
 
