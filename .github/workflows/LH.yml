@@ -22,7 +22,6 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@main
       with:
-        python-version: latest
         check-latest: true
     - name: Install tencentcloud-sdk-python
       run: |
